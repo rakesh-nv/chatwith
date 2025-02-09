@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1070919266197",
+    "project_id": "chatwith-56cf9",
+    "storage_bucket": "chatwith-56cf9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070919266197:android:6e4b4a29715e21d94f909c",
+        "android_client_info": {
+          "package_name": "com.example.chatwith"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxvajYaB0K6cmzMSQnzA6lfFFlD_GCfsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
