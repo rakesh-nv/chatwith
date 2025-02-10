@@ -1,7 +1,9 @@
 import 'package:chatwith/providers/auth_provider.dart';
+import 'package:chatwith/services/navigation_service.dart';
 import 'package:chatwith/services/snackbar_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -193,6 +195,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget _registerButton() {
     return GestureDetector(
       onTap: () {
+        NavigationService.instance.navigateTo("register");
         print('hey');
       },
       child: Container(

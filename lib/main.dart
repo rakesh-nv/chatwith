@@ -1,8 +1,9 @@
+import 'package:chatwith/pages/home_page.dart';
 import 'package:chatwith/pages/login_page.dart';
 import 'package:chatwith/pages/registration_page.dart';
+import 'package:chatwith/services/navigation_service.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_analytics/firebase_analytics.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,13 +19,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'chat with',
+      navigatorKey: NavigationService.instance.navigatorKey,
       theme: ThemeData(
-          brightness: Brightness.dark,
-          primaryColor: Color.fromARGB(42, 117, 188, 1),
-          hintColor: Color.fromARGB(42, 117, 188, 1),
-          scaffoldBackgroundColor: Color.fromARGB(28, 27, 27, 1)),
-      // home: const LoginPage(),
-      home: RegistrationPage(),
+        brightness: Brightness.dark,
+        primaryColor: Color.fromARGB(42, 117, 188, 1),
+        hintColor: Color.fromARGB(42, 117, 188, 1),
+        scaffoldBackgroundColor: Color.fromARGB(28, 27, 27, 1),
+      ),
+      initialRoute: "home",
+      routes:{
+    "login":(BuildContext _context)=>LoginPage(),
+    "register":(BuildContext _context)=>RegistrationPage(),
+    "home": (BuildContext _context)=>HomePage(),
+    },
     );
   }
 }
